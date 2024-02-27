@@ -1,0 +1,11 @@
+<template>
+    <div>
+        <p class="permanentMarker textWhite headingFontSize slds-p-top_medium slds-p-left_medium">ISV Automation Suite</p>
+        <p class='permanentMarker textBlue pointerHover smallFontSize slds-p-left_xx-large slds-p-bottom_xx-large' onclick={handleAuthorClick}>By: Chayse McMillan</p>
+
+        <!--Menu Options (Recursive)-->
+        <div class="">
+            <c-automation-suite-menu-item menu-items={menuTree}></c-automation-suite-menu-item><!--onmenuitemsrendered={handleInitMenuStyles}-->
+        </div>
+    </div>
+</template>

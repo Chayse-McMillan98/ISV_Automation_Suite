@@ -1,0 +1,29 @@
+@import 'c/sharedStyles';
+
+/* remove blue border for app */
+.parent-div {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: -1em;
+    background-color: #262626;
+    z-index: 2;
+}
+
+.parent-div-scroll {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: -1em;
+    background-color: #262626;
+    z-index: 1;
+}
+
+.rounded-bottom {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

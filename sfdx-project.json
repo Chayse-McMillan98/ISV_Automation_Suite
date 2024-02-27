@@ -2,11 +2,18 @@
   "packageDirectories": [
     {
       "path": "force-app",
-      "default": true
+      "default": true,
+      "package": "isvAutomationSuite",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "versionDescription": "ISV Automation Suite - 2GP."
     }
   ],
   "name": "isvAutomationSuite",
-  "namespace": "",
+  "namespace": "reciprotech",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "53.0"
+  "sourceApiVersion": "53.0",
+  "packageAliases": {
+    "isvAutomationSuite": "0HoDm000000PAzYKAW"
+  }
 }

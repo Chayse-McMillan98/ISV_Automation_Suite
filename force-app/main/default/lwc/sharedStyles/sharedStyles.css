@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Permanent_Marker';
+    src: url(/resource/Permanent_Marker) format('TrueType');
+}
+
+.permanentMarker {
+    font-family: 'Permanent_Marker';
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(/resource/Montserrat) format('TrueType');
+}
+
+.montserrat {
+    font-family: 'Montserrat';
+    
+}
+/*font-weight: bold;*/
+
+
+
+.textWhite {
+    color: white;
+}
+
+.textBlue {
+    color: #0385ff;
+}
+
+
+:hover .pointerHover {
+    cursor: pointer;
+}
+
+
+
+.headingFontSize {
+    font-size: 30px;
+}
+
+.smallFontSize {
+    font-size: 15px;
+}

@@ -1,0 +1,20 @@
+<template>
+    <div class="parent-div slds-brand-band_none">
+        <div class="slds-grid" style="height: 100%">
+
+            <!--Left Hand Menu-->
+            <div class="slds-col" style="max-width: 375px; min-width: 375px; background-color: #333333;">
+                <c-automation-suite-menu menu-tree={menuTree} onmenuselection={handleMenuItemSelected}></c-automation-suite-menu>
+            </div>
+
+            <!--Main Content Area-->
+            <div class="slds-col" style="background-color: white; width: 100%">
+                CURRENT MENU SELECTION: {currentMenuSelection}
+            </div>
+        </div>
+
+        <!--Bottom Padding-->
+        <div class="slds-p-top_medium"></div>
+    </div>
+    <div class="parent-div-scroll"></div>
+</template>

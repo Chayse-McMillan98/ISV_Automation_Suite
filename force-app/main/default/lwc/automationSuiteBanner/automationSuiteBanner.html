@@ -1,0 +1,47 @@
+<template>
+    <lightning-card style="padding-top:0px;">
+        <div class="slds-grid">
+
+            
+            <!-- Automation Suite Banner-->
+            <div class="slds-col slds-text-align_left">
+                <div class="slds-grid slds-wrap slds-p-left_medium vertically-align-middle" style="text-align:center">
+
+                    <!--Automation Suite Icon-->
+                    <div class="slds-media__figure slds-p-around_xx-small rounded-corners" style="color:white; background-color:#262626">
+                        <span class="slds-icon_container slds-icon-utility-announcement slds-current-color" title="Author: Chayse McMillan">
+                            <img src={io1440_icon} width="50px" height="50px">
+                            <span class="slds-assistive-text">The #1 Scheduling App On Salesforce!</span>
+                        </span>
+                    </div>
+            
+                    <!--Automated Scheduler Title-->
+                    <div class="text-align-left flex-none">
+                        <div class="slds-text-heading_large montserrat text-1440"><!--style="margin-top: 10px;"-->
+                            1440 Toolz
+                        </div>
+                        <div class="slds-text-title montserrat"><!--text-1440 slds-p-right_large-->
+                            <a style="color: #469fe3;" onclick={openCreator}>By: Chayse McMillan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Toolz Setting Cog-->
+            <template if:true={isSudoAdmin}>
+                <div class="slds-col slds-float_right flex-none vertically-align-middle">
+                    <div class="slds-p-right_medium" style="text-align: center;">
+                        <lightning-button-icon icon-name="utility:settings"  variant="bare" alternative-text="Settings" title="Settings" size="large" onclick={handleSettingOpenToggle}></lightning-button-icon>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+
+
+    <!--Toolz Settings Modal-->
+    <template if:true={settingModalOpen}>
+        <!--<c-toolz-app-setting-modal onclosemodal={handleSettingOpenToggle}></c-toolz-app-setting-modal>-->
+    </template>
+</template>

@@ -1,0 +1,31 @@
+<template>
+    <template for:each={menuItems} for:item="item">
+        <div key={item.apiName} class={dynamicMenuClasslist} style={dynamicMenuStyle}>
+            <div class="menuText montserrat slds-p-bottom_xx-small slds-p-top_x-small" onclick={handleMenuItemClick} data-item={item.apiName} onmouseover={handleMenuItemMouseOver} onmouseout={handleMenuItemMouseOut}>
+                {item.name}
+
+                <!--Expand / Collapse Cheveron-->
+                <template lwc:if={item.subItems}>
+                    <span class="slds-icon_container slds-icon-utility-announcement slds-current-color slds-float_right">
+                        <template lwc:if={item.subItemsExpanded}>
+                            <lightning-icon size="xx-small" icon-name="utility:chevrondown" alternative-text="accordionIcon" title="accordionIcon"></lightning-icon>
+                        </template>
+                        <template lwc:else>
+                            <lightning-icon size="xx-small" icon-name="utility:chevronright" alternative-text="accordionIcon" title="accordionIcon"></lightning-icon>
+                        </template>
+                    </span>
+                </template>
+            </div>
+
+            <!--Menu Underline For Root-->
+            <template if:false={subTree}>
+                <div class="menuLightBorder"></div>
+            </template>
+
+            <!--Recursive Menu Options (Sub-Items)-->
+            <template lwc:if={item.subItemsExpanded}>
+                <c-automation-suite-menu-item key={item.apiName} menu-items={item.subItems} onsubmenuexpanded={handleCSSActiveToggle} onmenuselection={handleCSSActiveToggle} sub-tree-l-pad={subTreeLPad} active-subtree="true"></c-automation-suite-menu-item>
+            </template>
+        </div>
+    </template>
+</template>

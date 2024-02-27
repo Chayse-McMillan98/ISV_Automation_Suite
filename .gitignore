@@ -43,3 +43,11 @@ $RECYCLE.BIN/
 **/__pycache__/
 **/.venv/
 **/venv/
+
+
+# custom
+.husky/
+.sfdx/
+.vscode/
+.prettierignore
+.prettierrc
